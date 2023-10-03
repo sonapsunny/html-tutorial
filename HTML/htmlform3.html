@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+<title> Onblur Event Page </title>
+
+<script>
+function checkField1()
+{
+    var field=document.getElementById("field1").value;
+}
+function checkField2()
+{
+    var field=document.getElementById("field2").value;
+}
+function checkField3()
+{
+    var field=document.getElementById("field3").value;
+    var regex=/^[A-Za=z]{3}$/;
+    if(regex.test(field))
+        document.getElementById("message3").innerHTML="Input Accepted";
+    else
+        document.getElementById("message3").innerHTML="Please use a three letter code";   
+}
+</script>
+
+</head>
+
+<body>
+
+<p> Javascript onblur event tests </p>
+
+<form>
+Field 1<input id="field1" type="text" onblur ="checkField1();"/> <span id="message1"></span><br>
+Field 2<input id="field2" type="text" onblur ="checkField2();"/> <span id="message2"></span><br>
+Country code JS:<input id="field3" type="text" onblur ="checkField3();"/> <span id="message3"></span><br>
+Country code HTML5:<input type="text" name="country_code"
+pattern="[A-Za-z]{3}" title="Three letter Country code" required><br>
+<input type="submit">
+>/form.
+
+</body>
+
+</html>

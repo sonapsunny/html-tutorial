@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="formvalidation1.css">
+        <title>Form Validation</title>
+        <script type="text/javascript" src="formvalidation1.js"></script>
+    </head>
+    <body>
+        <form action="#">
+            <div id="fullpage">
+                <h1>Make an Order:</h1>
+                <table border="0">
+                    <tr>
+                        <td class="label_col">First Name:</td>
+                        <td class="input_col"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();"></td>
+                        <td class="feedback_col"><span id="firstNamePrompt">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Last Name:</td>
+                        <td class="input_col"><input name="lastName" id="lastName" type="text" onblur="validateLastName();"></td>
+                        <td class="feedback_col"><span id="lastNamePrompt">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Phone Number:</td>
+                        <td class="input_col"><input name="phone" id="phone" type="text" onblur="validatePhone();"placeholder="xxx-xxx-xxxx"></td>
+                        <td class="feedback_col"><span id="phonePrompt">xxx-xxx-xxxx</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Order Quantity:</td>
+                        <td class="input_col"><input name="quantity" id="quantity" type="number"></td>
+                        <td class="feedback_col"><span id="quantityPrompt">1&ndash;55</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label_col">Item Price:</td>
+                        <td class="input_col"><input name="price" id="price" type="text" value="10.00" readonly></td>
+                        <td class="feedback_col">USD</td>
+                    </tr>
+                    <tr>
+                        <td class="Button" id="Button" colspan="3"><span class="buttonBG" onclick="calcOrder();">Order Now</span></td>
+                    </tr>
+                </table>
+                <span id="orderConfirm">&nbsp;</span>
+            </div>
+            <!--
+                <input type="submit" value="submit"/>
+            -->
+        </form>
+    </body>
+</html>
